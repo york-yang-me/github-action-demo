@@ -1,5 +1,6 @@
 {
   "name": "github-actions-demo",
+  "homepage": "https://york-yang-me.github.io/github-action-demo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
