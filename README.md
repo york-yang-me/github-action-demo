@@ -4,7 +4,7 @@ github action test
 - サポーター：T2メンバー全員　`☕☕☕`
 - デモ制作者：york-yang 　`☕☕☕`
 
-![疲れわ!](https://github.com/york-yang-me/github-action-demo/blob/main/style_picture.png)
+![疲れわ!](https://github.com/york-yang-me/github-action-demo/blob/master/style_picture.png)
 
 ## GitHub Actions 定義
 GitHub Actionsは、ビルド、テスト、デプロイのパイプラインを自動化できる継続的インテグレーションと継続的デリバリー (CI/CD) のプラットフォームです。
