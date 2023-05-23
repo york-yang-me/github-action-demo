@@ -44,11 +44,11 @@ github-action-demo:
 ## 主要なファイルの説明
 1. deploy.yml
 
-GitHub Actionsの設定ファイルはワークフローファイルと呼ばれ、コードリポジトリの **.github/workflows** ディレクトリに保存されています。
+   GitHub Actionsの設定ファイルはワークフローファイルと呼ばれ、コードリポジトリの **.github/workflows** ディレクトリに保存されています。
 
-ワークフローファイルはYAMLの形で、好きな名前をつけることができますが、.ymlサフィックスが必要です。`eg. deploy.yml`リポジトリにも複数のワークフローファイルを持つことができます
+   ワークフローファイルはYAMLの形で、好きな名前をつけることができますが、.ymlサフィックスが必要です。`eg. deploy.yml`リポジトリにも複数のワークフローファイルを持つことができます。
 
-GitHubは　**.github/workflows**に.ymlファイルを見つけると自動的に実行します。
+   GitHubは **.github/workflows** に.ymlファイルを見つけると自動的に実行します。
 
 ## 手順
 って、手順は？
