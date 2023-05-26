@@ -71,10 +71,74 @@ github-action-demo:
 ## 手順
 1. 新しいGithubリポジトリを作ります。ここでgithub-action-demoというリポジトリを使って説明します。
 
-3.
-4.
+2. 個人用アクセス トークンを作成します。GitHub actionをリソースに自動的にアクセスするため、個人アカウントのセッティン画面で`Personal access tokens`を作ります。
+   リンクはこちらへ：https://github.com/settings/tokens
+
+3. 指定されたリポジトリにトークンを保存します。リポジトリの`Settings/Secrets`にコピーします。
+
+4. 個人PCで`create-react-app`を利用して、新規プロジェクトを構築します。`npx`コマンドを利用すれば、`npm`パッケージの「ダウンロード」と「実行」をまとめて行なってくれます。
+   ```node.js
+   npx create-react-app github-action-demo
+   cd github-action-demo
+   ```
+   作業環境は以下の通りです：
+   ```shell
+   >> node -v
+   v14.17.0
+   >> npm -v
+   6.14.13
+   ```
+
+5. `package.json`ファイルを開き、アプリケーションが公開されるルートディレクトリ(root directory)を示す`homepage`フィールドを追加します。
+   ```
+   "homepage": "https://[username].github.io/github-actions-demo",
+   ```
+   [username]は自分のGithubアカウント名を変更してください。
+
+6. Github action workflowの作成します。リポジトリの`Actions`画面へ移動し、actionに関するワークフローを作ります。
+
+
+   - ここで他人が作た設定ファイルを利用します。[JamesIves/github-pages-deploy-action](https://github.com/marketplace/actions/deploy-to-github-pages)を使います。
+ 　
+   - このアクションは、そのままコピーできるサンプルワークフローファイルを提供しています（[ソースコード](https://github.com/ruanyf/github-actions-demo/blob/master/.github/workflows/ci.yml)）。
+   
+   <details><summary>ここに参照の例があります。</summary>     
+   <p>
+           
+   ```yml
+        name: GitHub Actions Build and Deploy Demo
+        on:
+          push:
+            branches:
+              - master
+        jobs:
+          build-and-deploy:
+            runs-on: ubuntu-latest
+            steps:
+              - name: Checkout 🛎️
+                uses: actions/checkout@v2.3.1
+                with:
+                  persist-credentials: false
+
+              - name: Install and Build 🔧
+                run: |
+                  npm install
+                  npm run-script build
+
+              - name: Deploy 🚀
+                uses: JamesIves/github-pages-deploy-action@4.1.1
+                with:
+                  branch: gh-pages
+                  folder: build
+                  token: ${{ secrets.ACCESS_TOKEN }}   
+   ```
+           
+   </p>
+   </details>
+
+
 
 後で書くわ～～～～
 (¦3[▓▓] (¦3[▓▓] (¦3[▓▓] 
 
-![疲れわ!](https://github.com/york-yang-me/github-action-demo/blob/master/style_picture.png)
+![疲れわ!](https://github.com/york-yang-me/github-action-demo/blob/master/img/style_picture.png)
