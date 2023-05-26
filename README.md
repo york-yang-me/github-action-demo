@@ -18,11 +18,23 @@ github-action-demo:
 │  package.json
 │  ReactREADME.md
 │  README.md
-│  style_picture.png
 │  
 ├─.github
 │  └─workflows
 │          deploy.yml
+│          
+├─img
+│      action logs.png
+│      actions workflow.png
+│      failed action logs.png
+│      github page link.png
+│      new repository.png
+│      personal access token.png
+│      style_picture.png
+│      token binding.png
+│      token copy.png
+│      token setting.jpg
+│      web .png
 │          
 ├─public
 │      favicon.ico
@@ -66,6 +78,10 @@ github-action-demo:
 4. package.json
     
    Node.jsにおいてインストールするパッケージが記述されたファイルです。
+
+5. img
+   
+   READMEに関するテスト画像です。
 
 
 ## 手順
