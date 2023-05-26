@@ -87,10 +87,20 @@ github-action-demo:
 ## 手順
 1. 新しいGithubリポジトリを作ります。ここでgithub-action-demoというリポジトリを使って説明します。
 
+  ![new pages](https://github.com/york-yang-me/github-action-demo/blob/master/img/new%20repository.png)
+  
 2. 個人用アクセス トークンを作成します。GitHub actionをリソースに自動的にアクセスするため、個人アカウントのセッティン画面で`Personal access tokens`を作ります。
    リンクはこちらへ：https://github.com/settings/tokens
 
+  ![token](https://github.com/york-yang-me/github-action-demo/blob/master/img/personal%20access%20token.png)
+
+  ![token setting](https://github.com/york-yang-me/github-action-demo/blob/master/img/token%20setting.jpg)
+
 3. 指定されたリポジトリにトークンを保存します。リポジトリの`Settings/Secrets`にコピーします。
+
+  ![token copy](https://github.com/york-yang-me/github-action-demo/blob/master/img/token%20copy.png)
+
+  ![token binding](https://github.com/york-yang-me/github-action-demo/blob/master/img/token%20binding.png)
 
 4. 個人PCで`create-react-app`を利用して、新規プロジェクトを構築します。`npx`コマンドを利用すれば、`npm`パッケージの「ダウンロード」と「実行」をまとめて行なってくれます。
    ```node.js
@@ -113,6 +123,7 @@ github-action-demo:
 
 6. Github action workflowの作成します。リポジトリの`Actions`画面へ移動し、actionに関するワークフローを作ります。
 
+   ![workflow](https://github.com/york-yang-me/github-action-demo/blob/master/img/actions%20workflow.png)
 
    - ここで他人が作た設定ファイルを利用します。[JamesIves/github-pages-deploy-action](https://github.com/marketplace/actions/deploy-to-github-pages)を使います。
  　
@@ -164,14 +175,17 @@ github-action-demo:
    
    GitHubはワークフローファイルが見つかれば自動的に実行します。ログはウェブサイトでリアルタイムに見えます。
    
+   ![action logs](https://github.com/york-yang-me/github-action-demo/blob/master/img/action%20logs.png)
+   
    もしActionsを実行失敗したら、問題が発生したところもチェックできます。
    
+   ![failed action logs](https://github.com/york-yang-me/github-action-demo/blob/master/img/failed%20action%20logs.png)
 8. Github pagesでウェブ画面を公開します。
 
    まずはデプロイしたい分枝を指定します。リポジトリのセッティング画面で`pages`をクリックし、生成した`gh-pages`分枝を指定します。
-   
+    ![github pages link](https://github.com/york-yang-me/github-action-demo/blob/master/img/github%20page%20link.png)
    その後、`https://[username].github.io/github-action-demo/`をアクセスして、ウェブ画面をアクセスできます。
-
+   ![web page](https://github.com/york-yang-me/github-action-demo/blob/master/img/web%20.png)
    
 
 終わり(¦3[▓▓] (¦3[▓▓] (¦3[▓▓] 
