@@ -138,21 +138,26 @@ github-action-demo:
    
    念のため、このワークフローの機能も簡単に説明します。
    - `master`ブランチで`push`イベントが発生すると、すべてのプロセスがトリガーされます。
-   
    - `job`は1つだけで、仮想マシン環境`ubuntu-latest`上で実行します。
+   - `action/checkout`というアクションを使って、ソースコードを取得します。
+   - `npm`をインストールして、プロジェクトの環境(`build`)を構築します。
+   - `JamesIves/github-pages-deploy-action`というアクションを使用して、デプロイを行います。
+   - GitHubキー、リリースブランチ、構築環境が置かれるディレクトリ(`build`)という3つの環境変数が必要です。 
+    
+7. ローカルのリポジトリ`github-action-demo`をGithubに指定されたリポジトリ`[username]/github-action-demo`を`push`します。
    
-　 - `action/checkout`というアクションを使って、ソースコードを取得します。
-　 
-　 - `npm`をインストールして、プロジェクトの環境を構築します。
-　 
-　 - `JamesIves/github-pages-deploy-action`というアクションを使用して、デプロイを行います。
-　 
-　 - GitHubキー、リリースブランチ、ビルドが置かれるディレクトリという3つの環境変数が必要です。 
+   GitHubはワークフローファイルが見つかれば自動的に実行します。ログはウェブサイトでリアルタイムに見えます。
+   
+   もしActionsを実行失敗したら、問題が発生したところもチェックできます。
+   
+8. Github pagesでウェブ画面を公開します。
 
-7. 
+   まずはデプロイしたい分枝を指定します。リポジトリのセッティング画面で`pages`をクリックし、生成した`gh-pages`分枝を指定します。
+   
+   その後、`https://[username].github.io/github-action-demo/`をアクセスして、ウェブ画面をアクセスできます。
 
+   
 
-後で書くわ～～～～
-(¦3[▓▓] (¦3[▓▓] (¦3[▓▓] 
+終わり(¦3[▓▓] (¦3[▓▓] (¦3[▓▓] 
 
 ![疲れわ!](https://github.com/york-yang-me/github-action-demo/blob/master/img/style_picture.png)
