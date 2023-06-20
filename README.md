@@ -188,6 +188,6 @@ github-action-demo:
    ![web page](https://github.com/york-yang-me/github-action-demo/blob/master/img/web%20.png)
    
 
-終わり(¦3[▓▓] (¦3[▓▓] (¦3[▓▓] 
+終わり(¦3[▓▓] (¦3[▓▓] 
 
 ![疲れわ!](https://github.com/york-yang-me/github-action-demo/blob/master/img/style_picture.png)
