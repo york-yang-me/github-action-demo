@@ -182,7 +182,7 @@ github-action-demo:
    ![failed action logs](https://github.com/york-yang-me/github-action-demo/blob/master/img/failed%20action%20logs.png)
 8. Github pagesでウェブ画面を公開します。
 
-   まずはデプロイしたい分枝を指定します。リポジトリのセッティング画面で`pages`をクリックし、生成した`gh-pages`分枝を指定します。
+   まずはデプロイしたいブランチを指定します。リポジトリのセッティング画面で`pages`をクリックし、生成した`gh-pages`ブランチを指定します。
     ![github pages link](https://github.com/york-yang-me/github-action-demo/blob/master/img/github%20page%20link.png)
    その後、`https://[username].github.io/github-action-demo/`をアクセスして、ウェブ画面をアクセスできます。
    ![web page](https://github.com/york-yang-me/github-action-demo/blob/master/img/web%20.png)
